@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Игорь Локтев](https://up.htmlacademy.ru/adaptive/14/user/614411).
-* Наставник: `Неизвестно`.
+* Наставник: [Юлия Плонина](https://htmlacademy.ru/profile/id64655).
 
 ---
 
