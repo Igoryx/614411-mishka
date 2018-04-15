@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Mishka form</title>
+</head>
+<body>
+  <header class="page-header">
+    <nav class="page-header__nav main-nav">
+      <a class="main-nav__logo" href="#">
+        <img class="main-nav__image" src="http://placehold.it/86x35s" width="86" height="35" alt="mishka shop logo">
+      </a>
+      <button class="main-nav__toggle" type="button">открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">
+              Каталог товаров
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Вязание на заказ
+            </a>
+          </li>
+          <li class="site-list__item site-list__search">
+            <a href="#">
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="site-list__item site-list__cart">
+            <a href="#">
+              Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page-main inner-page-main">
+    <h1 class="inner-page-main__title">Вязание на заказ</h1>
+    <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <fieldset class="order-form__fieldset order-form__fieldset--type">
+        <legend class="order-form__title order-form__title--type">тип</legend>
+        <ul class="order-form__type-list">
+          <li class="order-form__type-item">
+            <input class="visually-hidden" type="radio" id="type1" name="type" value="accessory" checked>
+            <label for="type1">Аксессуар для интерьера</label>
+          </li>
+          <li class="order-form__type-item">
+            <input class="visually-hidden" type="radio" id="type2" name="type" value="toy">
+            <label for="type2">Детская игрушка</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="order-form__fieldset order-form__fieldset--color">
+        <legend class="order-form__title order-form__title--color">цвет</legend>
+        <ul class="order-form__color-list">
+          <li class="order-form__color-item">
+            <input class="visually-hidden" type="checkbox" id="white" name="color" value="white" checked>
+            <label for="white">Белый</label>
+          </li>
+          <li class="order-form__color-item">
+            <input class="visually-hidden" type="checkbox" id="grey" name="color" value="grey" checked>
+            <label for="grey">Серый</label>
+          </li>
+          <li class="order-form__color-item">
+            <input class="visually-hidden" type="checkbox" id="tiffany" name="color" value="tiffany">
+            <label for="tiffany">"Тиффани"</label>
+          </li>
+          <li class="order-form__color-item">
+            <input class="visually-hidden" type="checkbox" id="black" name="color" value="black">
+            <label for="black">Черный</label>
+          </li>
+          <li class="order-form__color-item">
+            <input class="visually-hidden" type="checkbox" id="pink" name="color" value="pink">
+            <label for="pink">Розовый</label>
+          </li>
+          <li class="order-form__color-item">
+            <input class="visually-hidden" type="checkbox" id="orange" name="color" value="orange">
+            <label for="orange">Оранжевый</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="order-form__name-info">
+        <legend class="order-form__title order-form__title--name">ФИО</legend>
+        <ul class="order-form__name-list">
+          <li class="order-form__name-item">
+            <label for="first-name">Имя:</label>
+            <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
+          </li>
+          <li class="order-form__name-item">
+            <label for="surname">Фамилия:</label>
+            <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+          </li>
+          <li class="order-form__name-item">
+            <label for="second-name">Отчество:</label>
+            <input type="text" name="second-name" id="second-name" placeholder="Отчество, если желаете">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="order-form__phone">
+        <legend class="order-form__title order-form__title--phone">тел</legend>
+        <label>
+            <input type="tel" name="tel" id="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+        </label>
+      </fieldset>
+      <fieldset class="order-form__email">
+        <legend class="order-form__title order-form__title--email">e-mail</legend>
+        <label>
+            <input type="email" id="email" placeholder="Ваш Email*" required>
+        </label>
+      </fieldset>
+      <fieldset class="order-form__additional">
+        <legend class="order-form__title order-form__title--additional">доп</legend>
+        <label>
+          <textarea name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </label>
+      </fieldset>
+      <p class="order-form__notice">*Поля обязательны для заполнения</p>
+      <input type="submit" class="order-form__submit-button button" value="отправить заказ">
+    </form>
+  </main>
+  <footer class="page-footer inner-page-footer">
+      <div class="inner-page-footer__last-block last-block">
+        <div class="last-block__social social">
+          <b class="visually-hidden">Мы в социальных сетях</b>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/mishka">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/mishka">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="https://twitter.com/mishka">Мы в Свитере)</a>
+            </li>
+          </ul>
+        </div>
+        <div class="last-block__copyright copyright">
+          <p class="copyright__link">Разработано</p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
