@@ -1,0 +1,49 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-block__label {
+  font-family: @font-title;
+  font-size: 17px;
+  line-height: 16px;
+  color: @color-accent;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 13px;
+
+  &::before {
+    content: "";
+    background-color: @color-accent;
+    width: 198px;
+    height: 1px;
+    position: absolute;
+    top: 8px;
+    left: 62px;
+  }
+}
+
+.input-block__input {
+  border: none;
+  font-family: @font-content;
+  font-size: 17px;
+  line-height: 38px;
+  border-bottom: 2px solid #000000;
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.input-block__textarea {
+  border: 2px solid #444444;
+  color: #444444;
+  font-family: @font-content;
+  font-size: 17px;
+  line-height: 18px;
+  padding: 17px;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
