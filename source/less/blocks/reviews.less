@@ -1,59 +1,60 @@
 .reviews {
-  width: 260px;
+  width: @mobile-content-width;
   padding-left: 30px;
   padding-right: 30px;
   margin: 0 auto;
   margin-bottom: 89px;
-
-  &__title {
-    font-family: "OpenSans-bold", "Arial", sans-serif;
-    font-size: 25px;
-    line-height: 30px;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 29px;
-  }
-
-  &__item {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
-  }
-
-  &__text {
-    font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 15px;
-    line-height: 30px;
-    margin: 0;
-    padding: 0;
-    color: #444444;
-    margin-bottom: 21px;
-  }
-
-  &__author {
-    font-family: "OpenSans-bold", "Arial", sans-serif;
-    font-size: 17px;
-    font-style: normal;
-    line-height: 30px;
-  }
-
-  &__email {
-    font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 17px;
-    font-style: normal;
-    line-height: 30px;
-  }
-
-  &__buttons-wrapper {
-    display: flex;
-    margin-bottom: 40px;
-  }
-
-  &__prev {
-    flex-grow: 1;
-  }
-
-  &__next {
-    flex-grow: 1;
-  }
 }
+
+.reviews__title {
+  font-family: @font-title;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 29px;
+}
+
+.reviews__item {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.reviews__text {
+  font-family: @font-content;
+  font-size: 15px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+  color: #444444;
+  margin-bottom: 21px;
+}
+
+.reviews__author {
+  font-family: @font-title;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 30px;
+}
+
+.reviews__email {
+  font-family: @font-content;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 30px;
+}
+
+.reviews__buttons-wrapper {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.reviews__change-button {
+  flex-grow: 1;
+  width: 130px;
+  height: 52px;
+  background-color: transparent;
+  border: 1px solid #ececec;
+}
+
