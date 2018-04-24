@@ -1,8 +1,7 @@
 .add-to-cart {
-  width: @mobile-content-width;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 0 auto;
+  .width;
+  padding-top: 34px;
+  padding-bottom: 46px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +18,7 @@
   line-height: 30px;
   text-transform: uppercase;
   margin-bottom: 17px;
-  margin-top: 34px;
+  width: 150px;
 }
 
 .add-to-cart__option {
@@ -28,7 +27,7 @@
   font-family: @font-content;
   font-size: 15px;
   line-height: 30px;
-  color: #444444;
+  color: @grey;
   margin-bottom: 22px;
 }
 
@@ -50,7 +49,7 @@
   font-family: @font-title;
   font-size: 17px;
   line-height: 16px;
-  color: #444444;
+  color: @grey;
   background-color: transparent;
   border: 2px solid #ececec;
 
@@ -64,5 +63,39 @@
   background-color: @color-accent;
   border: none;
   color: #ffffff;
-  margin-bottom: 46px;
+}
+
+@media (min-width: @tablet-width) {
+  .add-to-cart {
+    width: 566px;
+    padding: 44px 100px 47px;
+    box-sizing: border-box;
+    }
+}
+
+@media (min-width: @tablet-width) {
+  .add-to-cart__title {
+    font-size: 30px;
+    line-height: 57px;
+    width: 100%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .add-to-cart__list {
+    box-sizing: border-box;
+    padding: 5px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .add-to-cart__size-button {
+    width: 112px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .add-to-cart__button {
+    width: 350px;
+  }
 }
