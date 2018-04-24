@@ -74,6 +74,10 @@
 
   .site-list__item:nth-child(4) {
     order: 2;
+
+    .site-list__text {
+      display: none;
+    }
   }
 
   .site-list__item:nth-child(5) {
@@ -83,13 +87,6 @@
   .site-list__item:last-child {
     order: 6;
   }
-
-  .site-list__item:nth-child(4) {
-    .site-list__text {
-      display: none;
-    }
-  }
-}
 
 @media (min-width: @tablet-width) {
   .site-list__item--search {
@@ -168,6 +165,7 @@
   .site-list__item:nth-child(6) {
     order: 6;
     margin-right: 60px;
+
     .site-list__link {
       .secondary-link;
     }
@@ -175,6 +173,7 @@
 
   .site-list__item:nth-child(7) {
     order: 7;
+
     .site-list__link {
       .secondary-link;
     }
