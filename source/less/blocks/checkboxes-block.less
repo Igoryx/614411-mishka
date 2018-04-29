@@ -1,0 +1,35 @@
+.checkboxes-block__label {
+  font-family: @font-title;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .checkboxes-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .checkboxes-block__checkbox-block {
+  padding-left: 81px;
+  width: 250px;
+  box-sizing: border-box;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+.checkboxes-block {
+  width: 875px;
+}
+
+  .checkboxes-block__checkbox-block {
+    width: 264px;
+  }
+
+  .checkboxes-block__label {
+    font-size: 19px;
+    line-height: 18px;
+  }
+}

@@ -1,12 +1,10 @@
 .order-form {
-  .width;
   padding-top: 34px;
   padding-bottom: 56px;
 }
 
 .order-form__text {
-  margin: 0;
-  padding: 0;
+  .width;
   font-family: @font-content;
   font-size: 13px;
   line-height: 24px;
@@ -14,10 +12,9 @@
 }
 
 .order-form__fieldset {
-  margin: 0;
-  padding: 0;
+  .width;
   border: none;
-  margin-top: 27px;
+  padding-top: 27px;
 }
 
 .order-form__title {
@@ -52,8 +49,7 @@
 }
 
 .order-form__notice {
-  margin: 0;
-  padding: 0;
+  .width;
   font-family: @font-content;
   font-size: 14px;
   line-height: 16px;
@@ -64,5 +60,121 @@
 
 .order-form__submit-button {
   text-transform: uppercase;
-  width: 100%;
+  width: 260px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form {
+    padding-top: 73px;
+  }
+
+  .order-form__text {
+    .tab-width;
+    font-size: 17px;
+    line-height: 30px;
+    color: @grey;
+    padding-bottom: 8px;
+  }
+
+  .order-form__fieldset-wrapper {
+    display: flex;
+    flex-direction: row;
+    .tab-width;
+  }
+
+  .order-form__title {
+    width: 165px;
+    position: static;
+    flex-shrink: 0;
+    padding: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .order-form__fieldset {
+    padding: 65px 0 0 0;
+
+    &--dark {
+      background-color: #f1f1f1;
+      width: auto;
+    }
+
+    &--input {
+      margin: 0;
+      padding: 0;
+      padding-top: 70px;
+      padding-bottom: 50px;
+      margin-bottom: -80px;
+    }
+
+    &--textarea {
+      padding-top: 125px;
+      margin-bottom: 55px;
+    }
+  }
+
+  .order-form__list {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+
+  .order-form__item {
+    padding-left: 81px;
+    margin-bottom: 57px;
+  }
+
+  .order-form__submit-block {
+    .tab-width;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .order-form__notice {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    margin-top: 17px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order-form__submit-button {
+    padding: 0;
+    margin: 0;
+    width: 230px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__text {
+    width: 1150px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 225px;
+  }
+
+  .order-form__fieldset-wrapper {
+    box-sizing: border-box;
+    width: 1150px;
+    padding: 0 50px;
+  }
+
+  .order-form__title {
+    width: 175px;
+    text-align: center;
+  }
+
+  .order-form__list {
+    width: 700px;
+  }
+
+  .order-form__submit-block {
+    width: 700px;
+    padding: 0;
+  }
 }

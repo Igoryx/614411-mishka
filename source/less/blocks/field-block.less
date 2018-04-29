@@ -21,3 +21,32 @@
     color: rgba(68, 68, 68, 0.3);
   }
 }
+
+@media (min-width: @tablet-width) {
+  .field-block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .field-block__label {
+    margin-top: 10px;
+    padding-right: 25px;
+  }
+
+  .field-block__input {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-block__label {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .field-block__input {
+    font-size: 19px;
+    line-height: 38px;
+  }
+}

@@ -47,3 +47,57 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .input-block {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .input-block__label {
+    margin-top: 10px;
+    width: 167px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .input-block__input {
+    width: 500px;
+    margin-left: auto;
+
+    &::placeholder {
+      border: none;
+      color: @grey;
+      background-color: #f1f1f1;
+    }
+  }
+
+  .input-block__textarea {
+    width: 500px;
+    padding: 0;
+    min-height: 140px;
+
+    &::placeholder {
+      padding: 15px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .input-block__label {
+    padding-left: 60px;
+    box-sizing: border-box;
+    width: 175px;
+  }
+
+  .input-block__input {
+    width: 700px;
+  }
+
+  .input-block__textarea {
+    width: 700px;
+    min-height: 140px;
+  }
+}
