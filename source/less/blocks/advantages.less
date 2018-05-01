@@ -39,63 +39,45 @@
   .advantages {
     .tab-width;
   }
-}
 
-@media (min-width: @tablet-width) {
   .advantages__title {
     font-size: 43px;
     line-height: 50px;
   }
-}
 
-@media (min-width: @tablet-width) {
   .advantages__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 450px;
   }
-}
 
-@media (min-width: @tablet-width) {
   .advantages__text {
     width: 334px;
     box-sizing: border-box;
     padding-right: 34px;
   }
-}
 
-@media (min-width: @tablet-width) {
   .advantages__item--materials {
     order: 1;
   }
-}
 
-@media (min-width: @tablet-width) {
   .advantages__item--style {
     order: 3;
   }
-}
 
-@media (min-width: @tablet-width) {
   .advantages__item--likes {
     order: 5;
   }
-}
 
-@media (min-width: @tablet-width) {
   .advantages__item--handmade {
     order: 2;
   }
-}
 
-@media (min-width: @tablet-width) {
   .advantages__item--rus {
     order: 4;
   }
-}
 
-@media (min-width: @tablet-width) {
   .advantages__item--package {
     order: 6;
   }
@@ -103,8 +85,9 @@
 
 @media (min-width: @desktop-width) {
   .advantages {
-    .desk-width;
-    padding: 80px 180px 80px 275px;
+    width: 700px;
+    padding: 60px 275px 80px 275px;
+    box-sizing: unset;
   }
 
   .advantages__title {
@@ -115,5 +98,9 @@
   .advantages__text {
     font-size: 20px;
     line-height: 22px;
+  }
+
+  .advantages__item {
+    width: 350px;
   }
 }
