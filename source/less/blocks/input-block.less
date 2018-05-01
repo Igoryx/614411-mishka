@@ -29,9 +29,20 @@
   font-size: 17px;
   line-height: 38px;
   border-bottom: 2px solid #000000;
+  background-color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 2px solid @color-accent;
+  }
 
   &::placeholder {
     color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:active::placeholder {
+    color: @grey;
   }
 }
 
@@ -41,10 +52,17 @@
   font-family: @font-content;
   font-size: 17px;
   line-height: 18px;
-  padding: 17px;
+  box-sizing: border-box;
+  padding: 15px;
 
   &::placeholder {
     opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: @color-accent;
   }
 }
 
@@ -66,22 +84,11 @@
   .input-block__input {
     width: 500px;
     margin-left: auto;
-
-    &::placeholder {
-      border: none;
-      color: @grey;
-      background-color: #f1f1f1;
-    }
   }
 
   .input-block__textarea {
     width: 500px;
-    padding: 0;
     min-height: 140px;
-
-    &::placeholder {
-      padding: 15px;
-    }
   }
 }
 

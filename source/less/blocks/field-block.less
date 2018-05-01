@@ -17,8 +17,18 @@
   font-size: 17px;
   line-height: 38px;
 
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 2px solid @color-accent;
+  }
+
   &::placeholder {
     color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:active::placeholder {
+    color: @grey;
   }
 }
 
