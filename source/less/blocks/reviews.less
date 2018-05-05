@@ -74,6 +74,10 @@
     background-repeat: no-repeat;
     background-position: 0 -45px;
     background-size: contain;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .reviews__title {
