@@ -12,8 +12,12 @@
     <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--logo">
-          <a class="site-list__link site-list__logo" href="index.html">
-            <img class="site-list__image" src="img/logo-mobile.svg" width="86" height="35" alt="mishka shop logo">
+          <a class="site-list__link site-list__logo">
+            <picture>
+              <source media="(min-width: 1250px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="site-list__image" src="img/logo-mobile.svg" width="86" height="35" alt="mishka shop logo">
+            </picture>
           </a>
           <button class="site-list__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
