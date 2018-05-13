@@ -101,7 +101,7 @@
       background-image: url("../img/hero-tablet@2x.jpg");
     }
 
-    &:after {
+    &::after {
       content: "";
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: no-repeat;
@@ -133,8 +133,8 @@
     line-height: 30px;
     transition: transform 0.2s ease-in;
 
-  &:hover {
-    transform: translateY(-5px);
+    &:hover {
+      transform: translateY(-5px);
     }
   }
 
@@ -176,7 +176,7 @@
       background-image: url("../img/hero-desktop@2x.jpg");
     }
 
-    &:after {
+    &::after {
       width: 1050px;
       left: 100px;
     }
