@@ -32,14 +32,14 @@ const compileStyles = () =>
     .pipe(gulp.dest("build/css"));
 
 const createSVGSprite = () =>
-	gulp
+  gulp
     .src("source/img/*.svg")
-		.pipe(plumber())
-		.pipe(svgstore({
+    .pipe(plumber())
+    .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-		.pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img"));
 
 const copyImages = () =>
   gulp.src("source/img/**/*.{png,jpg,svg}")
@@ -63,7 +63,7 @@ const modifyHTML = () =>
     .pipe(gulp.dest("build"));
 
 const copyAssets = () =>
-	gulp
+  gulp
   .src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
@@ -74,33 +74,33 @@ const copyAssets = () =>
   .pipe(gulp.dest("build"));
 
 const watch = (done) => {
-	gulp.watch("source/less/**/*.less", compileStyles);
-	gulp.watch("source/img/*.svg", createSVGSprite);
-	gulp.watch([
+  gulp.watch("source/less/**/*.less", compileStyles);
+  gulp.watch("source/img/*.svg", createSVGSprite);
+  gulp.watch([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**"
   ], copyAssets);
   gulp.watch("source/*.html", modifyHTML);
-	done();
+  done();
 };
 
 const syncBrowser = (done) => {
-	server.init(null, {
-		server: {
-			baseDir: './build'
-		}
-	});
-	server.watch('build/**/*.*').on('change', server.reload);
-	done();
+  server.init(null, {
+    server: {
+      baseDir: './build'
+    }
+  });
+  server.watch('build/**/*.*').on('change', server.reload);
+  done();
 };
 
 const buildQueue = [
-	clean,
-	createSVGSprite,
+  clean,
+  createSVGSprite,
   copyImages,
   createWebp,
-	compileStyles,
+  compileStyles,
   copyAssets,
   modifyHTML
 ];
