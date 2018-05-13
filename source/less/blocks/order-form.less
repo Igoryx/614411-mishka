@@ -1,5 +1,5 @@
 .order-form {
-  padding-top: 34px;
+  padding-top: 21px;
   padding-bottom: 56px;
 }
 
@@ -14,7 +14,19 @@
 .order-form__fieldset {
   .width;
   border: none;
-  padding-top: 27px;
+  padding-top: 23px;
+
+  &--input1 {
+    padding-top: 22px;
+  }
+
+  &--input2 {
+    padding-top: 30px;
+  }
+
+  &--textarea {
+    padding-top: 32px;
+  }
 }
 
 .order-form__title {
@@ -24,7 +36,8 @@
   color: @color-accent;
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
+  padding: 0;
 
   &::before {
     content: "";
@@ -44,8 +57,8 @@
 }
 
 .order-form__item {
-  padding-left: 61px;
-  margin-bottom: 26px;
+  padding-left: 63px;
+  margin-bottom: 22px;
 }
 
 .order-form__notice {
@@ -102,18 +115,26 @@
       width: auto;
     }
 
+    &--name {
+      padding-top: 55px;
+
+      legend {
+        margin-top: 12px;
+      }
+    }
+
     &--input1 {
-      padding-top: 70px;
+      padding-top: 55px;
       padding-bottom: 0;
     }
 
     &--input2 {
-      padding-top: 40px;
+      padding-top: 27px;
       padding-bottom: 50px;
     }
 
     &--textarea {
-      padding-top: 50px;
+      padding-top: 54px;
       margin-bottom: 55px;
     }
   }
@@ -140,7 +161,7 @@
     padding: 0;
     margin: 0;
     width: auto;
-    margin-top: 17px;
+    margin-top: 10px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -153,11 +174,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .order-form {
+    padding-top: 118px;
+    margin-bottom: -6px;
+  }
+
   .order-form__text {
     width: 1150px;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 225px;
+  }
+
+  .order-form__fieldset {
+    padding-top: 69px;
   }
 
   .order-form__fieldset-wrapper {
@@ -178,5 +208,28 @@
   .order-form__submit-block {
     width: 700px;
     padding: 0;
+  }
+
+  .order-form__fieldset--name {
+    legend {
+      margin-top: 0;
+    }
+
+    .order-form__list {
+      margin-top: -13px;
+    }
+  }
+
+  .order-form__fieldset--input1 {
+    padding-top: 53px;
+  }
+
+  .order-form__fieldset--input2 {
+    padding-top: 29px;
+  }
+
+  .order-form__fieldset--textarea {
+    padding-top: 54px;
+    margin-bottom: 48px;
   }
 }

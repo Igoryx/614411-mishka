@@ -1,7 +1,19 @@
 .reviews {
   .width;
-  padding-top: 15px;
-  padding-bottom: 45px;
+  padding-top: 20px;
+  padding-bottom: 53px;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: contain;
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 6px;
+    bottom: 0;
+    width: 260px;
+  }
 }
 
 .reviews__title {
@@ -10,7 +22,7 @@
   line-height: 30px;
   margin: 0;
   padding: 0;
-  margin-bottom: 29px;
+  margin-bottom: 24px;
 }
 
 .reviews__item {
@@ -26,7 +38,7 @@
   margin: 0;
   padding: 0;
   color: @grey;
-  margin-bottom: 21px;
+  margin-bottom: 27px;
 }
 
 .reviews__author {
@@ -45,7 +57,7 @@
 
 .reviews__buttons-wrapper {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .reviews__change-button {
@@ -65,10 +77,16 @@
   }
 }
 
+.reviews__write-us-button {
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
 @media (min-width: @tablet-width) {
   .reviews {
     .tab-width;
-    padding: 50px;
+    padding: 75px 50px 75px 50px;
     position: relative;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -77,6 +95,12 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/review@2x.jpg");
+    }
+
+    &::after {
+      width: 668px;
+      height: 14px;
+      bottom: -25px;
     }
   }
 
@@ -87,7 +111,7 @@
 
   .reviews__text {
     font-size: 17px;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
   }
 
   .reviews__email {
@@ -96,14 +120,14 @@
 
   .reviews__buttons-wrapper {
     position: absolute;
-    right: 50px;
-    bottom: 50px;
+    right: 44px;
+    bottom: 66px;
   }
 
   .reviews__write-us-button {
     position: absolute;
     right: 50px;
-    top: 45px;
+    top: 79px;
     width: 175px;
   }
 
@@ -117,29 +141,38 @@
   .reviews {
     .desk-width;
     width: 875px;
-    padding: 76px 100px 36px 275px;
+    padding: 80px 100px 65px 275px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 100px 0;
+    margin-bottom: 100px;
+
+    &::after {
+      width: 1050px;
+      height: 23px;
+      left: 100px;
+      bottom: -92px;
+    }
   }
 
   .reviews__title {
     .desk-title;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   .reviews__text {
     width: 780px;
+    margin-bottom: 37px;
   }
 
   .reviews__write-us-button {
-    top: 75px;
+    top: 89px;
     right: 100px;
   }
 
   .reviews__buttons-wrapper {
-    bottom: 65px;
-    right: 100px;
+    bottom: 95px;
+    right: 93px;
     margin: 0;
   }
 }

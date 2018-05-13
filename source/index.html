@@ -5,9 +5,12 @@
   <title>Mishka index</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__list site-list">
@@ -35,17 +38,14 @@
         </li>
         <li class="site-list__item site-list__item--search">
           <a class="site-list__link" href="#">
-            <svg class="site-list__icon" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
-              <path d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
-            </svg>
+            <svg class="site-list__icon" width="17" height="17"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
             <span class="site-list__text">Поиск по сайту</span>
           </a>
         </li>
         <li class="site-list__item site-list__item--cart">
           <a class="site-list__link" href="#">
-            <svg class="site-list__icon" x="0px" y="0px" width="21px" height="18px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
-              <path d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
-            </svg>Корзина: пока пуста
+            <svg class="site-list__icon" width="17" height="17"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
+            Корзина: пока пуста
           </a>
         </li>
         <li class="site-list__item site-list__item--new">
@@ -69,10 +69,12 @@
         <h2 class="stock__title">Милые штуки ручной<br>работы для дома</h2>
         <ul class="stock__list">
           <li class="stock__item stock__item--interior">
-            <a href="inter.html">Предметы<br>интерьера</a>
+            <a class="stock__link stock__link--interior" href="inter.html">Предметы<br>интерьера</a>
+            <svg width="40" height="62"><use xlink:href="img/sprite.svg#icon-interior"></use></svg>
           </li>
           <li class="stock__item stock__item--toys">
-            <a href="toys.html">Детские<br>игрушки</a>
+            <a class="stock__link stock__link--toys" href="toys.html">Детские<br>игрушки</a>
+            <svg width="60" height="60"><use xlink:href="img/sprite.svg#icon-toy"></use></svg>
           </li>
         </ul>
       </div>
@@ -99,6 +101,9 @@
         </tr>
       </table>
       <picture>
+        <source type="image/webp" media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
         <source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
         <img class="top-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="изображение товара недели">
@@ -111,16 +116,22 @@
       <h2 class="advantages__title title">Коротко о нас:</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--materials">
+          <svg class="advantages__image" width="32" height="37"><use xlink:href="img/sprite.svg#icon-feature-flower"></use></svg>
           <p class="advantages__text">Экологически<br>чистые материалы</p></li>
         <li class="advantages__item advantages__item--style">
+          <svg class="advantages__image" width="47" height="27"><use xlink:href="img/sprite.svg#icon-feature-money"></use></svg>
           <p class="advantages__text">Скандинавский стиль<br>по российской цене</p></li>
         <li class="advantages__item advantages__item--likes">
+          <svg class="advantages__image" width="34" height="27"><use xlink:href="img/sprite.svg#icon-feature-heart"></use></svg>
           <p class="advantages__text">Увеличивает лайки<br>на фотографиях</p></li>
         <li class="advantages__item advantages__item--handmade">
+          <svg class="advantages__image" width="35" height="34"><use xlink:href="img/sprite.svg#icon-feature-ball"></use></svg>
           <p class="advantages__text">Связано вручную с<br>любовью и умилением</p></li>
         <li class="advantages__item advantages__item--rus">
+          <svg class="advantages__image" width="55" height="23"><use xlink:href="img/sprite.svg#icon-feature-rocket"></use></svg>
           <p class="advantages__text">Поддержка отечественного производителя</p></li>
         <li class="advantages__item advantages__item--package">
+          <svg class="advantages__image" width="33" height="32"><use xlink:href="img/sprite.svg#icon-feature-gift"></use></svg>
           <p class="advantages__text">Поставляется в<br>подарочной упаковке</p></li>
       </ul>
     </section>
@@ -136,22 +147,18 @@
       </div>
       <div class="reviews__buttons-wrapper">
         <button class="reviews__change-button reviews__prev" type="button">
-          <svg class="reviews__arrows" x="0px" y="0px" width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
-            <polygon points="50,11.002 7.659,11.002 15.833,2.828 13.005,0 0,12.998 0.003,13.001 0,13.005 13.005,26.003 15.833,23.175 7.661,15.002 50,15.002 "/>
-          </svg>
+          <svg class="reviews__arrows" width="50" height="26"><use xlink:href="img/sprite.svg#icon-left-arrow"></use></svg>
           <span class="visually-hidden">Предыдущий отзыв</span>
         </button>
         <button class="reviews__change-button reviews__next" type="button">
-          <svg class="reviews__arrows" x="0px" y="0px" width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
-            <polygon points="0,11.002 42.341,11.002 34.166,2.828 36.995,0 50,12.998 49.996,13.001 50,13.005 36.995,26.003 34.166,23.175 42.339,15.002 0,15.002 "/>
-          </svg>
+          <svg class="reviews__arrows" width="50" height="26"><use xlink:href="img/sprite.svg#icon-right-arrow"></use></svg>
           <span class="visually-hidden">Следующий отзыв</span>
         </button>
       </div>
       <a class="reviews__write-us-button button" href="review.html">Написать</a>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__table-wrapper">
         <b class="contacts__title">Контакты</b>
         <table class="contacts__data">
           <tr>
@@ -165,35 +172,44 @@
             <td class="contacts__value">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
           </tr>
         </table>
+      </div>
+      <div class="contacts__map-wrapper">
         <picture>
+          <source type="image/webp" media="(min-width: 1250px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
           <source media="(min-width: 1250px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
           <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="наш адрес: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
-        <a href="form.html" class="contacts__write-us-button button">Напишите нам</a>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942417768!2d30.320889251796192!3d59.93879686895882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1526141168835" width="322" height="457" style="border:0" allowfullscreen></iframe>
       </div>
+      <a href="form.html" class="contacts__write-us-button button">Напишите нам</a>
     </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__inner">
       <a class="page-footer__logo" href="#">
-        <img class="page-footer__image" src="img/logo-footer.svg" width="86" height="35" alt="mishka shop logo">
+        <svg class="page-footer__image" width="86" height="35"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
       </a>
       <div class="page-footer__social social">
         <b class="visually-hidden">Мы в социальных сетях</b>
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/mishka">
+              <svg class="social__icon" width="22" height="21"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
               <span class="visually-hidden">Мы в Инстаграме</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/mishka">
+              <svg class="social__icon" width="15" height="28"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
               <span class="visually-hidden">Мы в Фейсбуке</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://twitter.com/mishka">
+              <svg class="social__icon" width="23" height="20"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
               <span class="visually-hidden">Мы в Свитере)</span>
             </a>
           </li>
@@ -202,29 +218,35 @@
       <div class="page-footer__copyright copyright">
         <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__svg" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-            <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
-          </svg>
+          <svg class="copyright__svg" width="27" height="34"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
         </a>
       </div>
     </div>
   </footer>
-  <section class="modal__add-to-cart add-to-cart">
-    <h2 class="add-to-cart__title">Добавить в корзину</h2>
-    <p class="add-to-cart__option">Выберите размер:</p>
-    <ul class="add-to-cart__list">
-      <li class="add-to-cart__item">
-        <button class="add-to-cart__size-button add-to-cart__size-button--active">S</button>
-      </li>
-      <li class="add-to-cart__item">
-        <button class="add-to-cart__size-button">M</button>
-      </li>
-      <li class="add-to-cart__item">
-        <button class="add-to-cart__size-button">L</button>
-      </li>
-    </ul>
-    <a class="add-to-cart__button button" href="#">Добавить</a>
+  <section class="modal add-to-cart">
+    <form class="modal__form add-to-cart__form" action="https://echo.htmlacademy.ru" method="post">
+      <legend class="add-to-cart__title">Добавить в корзину</legend>
+      <p class="add-to-cart__option">Выберите размер:</p>
+      <ul class="add-to-cart__list">
+        <li class="add-to-cart__item">
+          <input class="visually-hidden" type="radio" id="size1" name="size" value="S" checked>
+          <label class="add-to-cart__size-button add-to-cart__size-button--1" for="size1"></label>
+        </li>
+        <li class="add-to-cart__item">
+          <input class="visually-hidden" type="radio" id="size2" name="size" value="M">
+          <label class="add-to-cart__size-button add-to-cart__size-button--2" for="size2"></label>
+        </li>
+        <li class="add-to-cart__item">
+          <input class="visually-hidden" type="radio" id="size3" name="size" value="L">
+          <label class="add-to-cart__size-button add-to-cart__size-button--3" for="size3"></label>
+        </li>
+      </ul>
+      <button class="add-to-cart__button button" type="submit">Добавить</button>
+    </form>
   </section>
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script src="js/modal.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
