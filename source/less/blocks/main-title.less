@@ -6,7 +6,7 @@
   .width;
   min-height: 177px;
   border-top: 1px solid #f1f1f1;
-  padding: 70px 30px 30px 30px;
+  padding: 70px 30px 30px 39px;
 }
 
 .main-title__content {
@@ -21,9 +21,20 @@
   .main-title {
     .tab-width;
     min-height: 226px;
-    padding-top: 103px;
-  }
+    padding-top: 93px;
+    position: relative;
 
+    &:after {
+      content: "";
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: -5px;
+      width: 677px;
+      height: 14px;
+      background-size: cover;
+    }
+  }
 
   .main-title__content {
     width: auto;
@@ -36,8 +47,13 @@
 @media (min-width: @desktop-width) {
   .main-title {
     .desk-width;
-    padding: 103px 50px 109px;
+    padding: 90px 50px 109px;
     min-height: 43px;
+
+    &::after {
+      width: 1050px;
+      height: 18px;
+    }
   }
 
   .main-title__content {

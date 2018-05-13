@@ -4,17 +4,94 @@
   line-height: 18px;
 }
 
+.checkboxes-block__checkbox-block {
+  margin-bottom: 42px;
+
+  &:last-child {
+    margin-bottom: 16px;
+  }
+}
+
+.checkboxes-block__checkbox-block input[type="checkbox"] {
+  display: none;
+}
+
+.checkboxes-block__label {
+  position: relative;
+}
+
+.checkboxes-block__checkbox-block input[type="checkbox"] + label::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  border: 2px solid @grey;
+  position: absolute;
+  left: -63px;
+  top: -8px;
+}
+
+.checkboxes-block__checkbox-block input[type="checkbox"]:hover + label::before,
+.checkboxes-block__checkbox-block input[type="checkbox"]:focus + label::before {
+  border-color: @color-accent;
+}
+
+.checkboxes-block__checkbox-block input[type="checkbox"]:active + label::before {
+  border-color: rgba(68, 68, 68, 0.2);
+}
+
+.checkboxes-block__checkbox-block input[type="checkbox"]:checked + label::after {
+  content: "";
+  width: 22px;
+  height: 16px;
+  position: absolute;
+  left: -55px;
+  top: 6px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 @media (min-width: @tablet-width) {
   .checkboxes-block {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 530px;
+    margin-left: -25px;
   }
 
   .checkboxes-block__checkbox-block {
-    padding-left: 81px;
-    width: 250px;
+    padding-left: 105px;
+    width: 263px;
     box-sizing: border-box;
+    margin-bottom: 57px;
+
+    &:last-child {
+      margin-bottom: 65px;
+    }
+  }
+
+  .checkboxes-block__label {
+    font-size: 19px;
+  }
+
+  .checkboxes-block__checkbox-block input[type="checkbox"] + label::before {
+    content: "";
+    width: 51px;
+    height: 49px;
+    border: 2px solid @grey;
+    position: absolute;
+    left: -80px;
+    top: -12px;
+  }
+
+  .checkboxes-block__checkbox-block input[type="checkbox"]:checked + label::after {
+    content: "";
+    width: 32px;
+    height: 19px;
+    position: absolute;
+    left: -67px;
+    top: 9px;
   }
 }
 

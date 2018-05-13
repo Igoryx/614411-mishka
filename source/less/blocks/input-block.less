@@ -1,6 +1,7 @@
 .input-block {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .input-block__label {
@@ -10,12 +11,12 @@
   color: @color-accent;
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 
   &::before {
     content: "";
     background-color: @color-accent;
-    width: 198px;
+    width: 179px;
     height: 1px;
     position: absolute;
     top: 8px;
@@ -27,7 +28,7 @@
   border: none;
   font-family: @font-content;
   font-size: 17px;
-  line-height: 38px;
+  line-height: 45px;
   border-bottom: 2px solid #000000;
   background-color: inherit;
 
@@ -46,6 +47,19 @@
   }
 }
 
+.input-block__input:hover + .input-block__icon,
+.input-block__input:focus + .input-block__icon,
+.input-block__input:active + .input-block__icon {
+  fill: @color-accent;
+}
+
+.input-block__icon {
+  position: absolute;
+  right: 8px;
+  top: 35px;
+  fill: rgba(0, 0, 0, 0.2);
+}
+
 .input-block__textarea {
   border: 2px solid @grey;
   color: @grey;
@@ -54,6 +68,7 @@
   line-height: 18px;
   box-sizing: border-box;
   padding: 15px;
+  margin-top: 14px;
 
   &::placeholder {
     opacity: 0.3;
@@ -84,11 +99,19 @@
   .input-block__input {
     width: 500px;
     margin-left: auto;
+    box-sizing: border-box;
+    padding-left: 15px;
   }
 
   .input-block__textarea {
     width: 500px;
     min-height: 140px;
+    margin-top: -6px;
+  }
+
+  .input-block__icon {
+    right: 23px;
+    top: 6px;
   }
 }
 

@@ -2,6 +2,118 @@
   font-family: @font-title;
   font-size: 17px;
   line-height: 18px;
+  position: relative;
+}
+
+.radio-block input[type="radio"] {
+  display: none;
+
+  & + label::before {
+    content: "";
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(68, 68, 68);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    left: -62px;
+    top: -5px;
+    box-sizing: border-box;
+  }
+
+  &:checked + label::before {
+    content: "";
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(68, 68, 68);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    left: -62px;
+    top: -5px;
+  }
+
+  &:checked + label::after {
+    content: "";
+    border-radius: 50%;
+    background-color: @color-accent;
+    border: 2px solid @color-accent;
+    position: absolute;
+    left: -50px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    z-index: 15;
+  }
+
+  &:hover + label::before,
+  &:focus + label::before {
+    border-color: @color-accent;
+  }
+
+  &:active + label::before {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .radio-block input[type="radio"] {
+    display: none;
+
+    & + label::before {
+      content: "";
+      border-style: solid;
+      border-width: 2px;
+      border-color: rgb(68, 68, 68);
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0);
+      position: absolute;
+      width: 51px;
+      height: 51px;
+      left: -80px;
+      top: -13px;
+      box-sizing: border-box;
+    }
+
+    &:checked + label::before {
+      content: "";
+      border-style: solid;
+      border-width: 2px;
+      border-color: rgb(68, 68, 68);
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0);
+      position: absolute;
+      width: 51px;
+      height: 51px;
+      left: -80px;
+      top: -13px;
+    }
+
+    &:checked + label::after {
+      content: "";
+      border-radius: 50%;
+      background-color: @color-accent;
+      border: 2px solid @color-accent;
+      position: absolute;
+      left: -64px;
+      top: 3px;
+      width: 15px;
+      height: 15px;
+      z-index: 15;
+    }
+  }
+
+  .radio-block__label {
+    font-size: 19px;
+  }
+
+  .radio-block:last-child {
+    margin-bottom: 63px;
+  }
 }
 
 @media (min-width: @desktop-width) {
