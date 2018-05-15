@@ -1,15 +1,15 @@
-.main-title__wrapper {
+.main-title {
   background-color: #f1f1f1;
 }
 
-.main-title {
+.main-title__content {
   .width;
   min-height: 177px;
   border-top: 1px solid #f1f1f1;
   padding: 70px 30px 30px 39px;
 }
 
-.main-title__content {
+.main-title__heading {
   font-family: @font-title;
   font-size: 27px;
   line-height: 30px;
@@ -18,7 +18,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-title {
+  .main-title__content {
     .tab-width;
     min-height: 226px;
     padding-top: 93px;
@@ -36,7 +36,7 @@
     }
   }
 
-  .main-title__content {
+  .main-title__heading {
     width: auto;
     text-align: center;
     .tab-title;
@@ -45,7 +45,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-title {
+  .main-title__content {
     .desk-width;
     padding: 90px 50px 109px;
     min-height: 43px;
@@ -56,7 +56,7 @@
     }
   }
 
-  .main-title__content {
+  .main-title__heading {
     .desk-title;
   }
 }

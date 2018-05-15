@@ -18,7 +18,7 @@
     };
   })
 
-  modal.addEventListener("click", function(event){
+  modal && modal.addEventListener("click", function(event){
     event.stopPropagation();
   })
 

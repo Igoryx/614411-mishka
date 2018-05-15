@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <div style="display:none">
-    <include src="build/img/sprite.svg"></include>
-  </div>
   <header class="page-header">
     <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__list site-list">
@@ -63,9 +60,9 @@
     </nav>
   </header>
   <main class="page-main">
-    <div class="main-title__wrapper">
-      <div class="main-title">
-        <h1 class="main-title__content">Каталог товаров</h1>
+    <div class="main-title">
+      <div class="main-title__content">
+        <h1 class="main-title__heading">Каталог товаров</h1>
       </div>
     </div>
     <ul class="products-list">
@@ -143,17 +140,16 @@
       </li>
     </ul>
     <section class="production-block">
-      <h2 class="production-block__title production-block__title--top">Процесс производства</h2>
+      <h2 class="production-block__title">Процесс производства</h2>
       <picture>
         <source type="image/webp" media="(min-width: 1250px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
         <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
         <source media="(min-width:1250px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
         <source media="(min-width:768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-        <img class="production-block__video" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x">
+        <img class="production-block__video" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="заставка видео">
       </picture>
       <div class="production-block__wrapper">
-        <h2 class="production-block__title production-block__title--body">Процесс производства</h2>
         <p class="production-block__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="production-block__button button" href="#">Сделать заказ</a>
       </div>
@@ -197,7 +193,7 @@
   </footer>
   <section class="modal add-to-cart" data-modal>
     <form class="modal__form add-to-cart__form" action="https://echo.htmlacademy.ru" method="post">
-      <legend class="add-to-cart__title">Добавить в корзину</legend>
+      < class="add-to-cart__title">Добавить в корзину</>
       <p class="add-to-cart__option">Выберите размер:</p>
       <ul class="add-to-cart__list">
         <li class="add-to-cart__item">

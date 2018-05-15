@@ -25,10 +25,6 @@
     top: 30px;
     left: 33px;
   }
-
-  &--body {
-    display: none;
-  }
 }
 
 .production-block__wrapper {
@@ -100,13 +96,18 @@
     width: 668px;
     padding: 0;
     margin-bottom: 65px;
+    position: relative;
+    min-height: 743px;
+    justify-content: flex-end;
   }
 
   .production-block__video {
-    order: -1;
+    order: 1;
     width: 668px;
     height: 455px;
     object-fit: cover;
+    position: relative;
+    bottom: 0;
   }
 
   .production-block__title {
@@ -114,18 +115,11 @@
     font-size: 20px;
     line-height: 24px;
     padding: 36px 0 26px 104px;
+    order: 2;
 
     &::before {
       top: 32px;
       left: 40px;
-    }
-
-    &--top {
-      display: none;
-    }
-
-    &--body {
-      display: flex;
     }
   }
 
@@ -138,34 +132,51 @@
   .production-block__button {
     margin: 0 40px 45px;
   }
+
+  .production-block__wrapper {
+    order: 3;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .production-block picture {
+    position: static;
+
+    &::after {
+      left: 441px;
+    }
+  }
+
   .production-block {
     .desk-width;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     margin-bottom: 107px;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 455px;
   }
 
   .production-block__wrapper {
     width: 368px;
     box-sizing: border-box;
     padding-left: 79px;
-    padding-bottom: 53px;
+    padding-bottom: 57px;
     border: 1px solid #ececec;
+    border-top: none;
   }
 
   .production-block__title {
-    width: auto;
-    box-sizing: border-box;
-    padding: 97px 52px 34px 0;
-    border: none;
+    width: 220px;
+    box-sizing: content-box;
+    padding: 97px 72px 30px 75px;
+    border-top: 1px solid #ececec;
+    border-right: 1px solid #ececec;
 
     &::before {
-      left: 0;
-      top: 46px;
+      left: 77px;
+      top: 43px;
     }
   }
 
@@ -173,6 +184,9 @@
     width: 682px;
     min-height: 100%;
     height: auto;
+    position: absolute;
+    left: 100px;
+    top: 0;
   }
 
   .production-block__description,
@@ -182,7 +196,7 @@
   }
 
   .production-block__button {
-    margin-top: 46px;
+    margin-top: 50px;
     width: 231px;
   }
 }
