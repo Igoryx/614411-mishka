@@ -145,6 +145,20 @@
     &::after {
       left: 441px;
     }
+
+    &:hover::after,
+    &:focus::after {
+      top: 50%;
+      left: 441px;
+      transform: translate(-50%, -50%) scale(1.2, 1.2);
+    }
+
+    &:active::after {
+      top: 50%;
+      left: 441px;
+      transform: translate(-50%, -50%) scale(0.8, 0.8);
+      opacity: 0.3;
+    }
   }
 
   .production-block {
