@@ -5,6 +5,8 @@
   <title>Mishka form</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <link rel="preload" href="/fonts/opensans.woff2" as="font">
+  <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -60,14 +62,14 @@
     </nav>
   </header>
   <main class="page-main">
-    <div class="main-title__wrapper">
-      <div class="main-title">
+    <div class="main-title">
+      <div class="main-title__wrapper">
         <h1 class="main-title__content">Вязание на заказ</h1>
       </div>
     </div>
     <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      <fieldset class="order-form__fieldset">
+      <fieldset class="order-form__fieldset order-form__fieldset--radio">
         <div class="order-form__fieldset-wrapper">
           <p class="order-form__title">Тип</p>
           <ul class="order-form__list">
@@ -167,7 +169,7 @@
   <footer class="page-footer">
     <div class="page-footer__inner">
       <a class="page-footer__logo" href="index.html">
-        <svg class="page-footer__image" width="86" height="35"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
+        <svg class="page-footer__image" width="102" height="35"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
       </a>
       <div class="page-footer__social social">
         <b class="visually-hidden">Мы в социальных сетях</b>

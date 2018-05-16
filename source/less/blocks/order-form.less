@@ -38,6 +38,7 @@
   position: relative;
   margin-bottom: 34px;
   padding: 0;
+  margin-top: 0;
 
   &::before {
     content: "";
@@ -119,7 +120,7 @@
     &--name {
       padding-top: 55px;
 
-      b {
+      p {
         margin-top: 12px;
       }
     }
@@ -130,7 +131,7 @@
     }
 
     &--input2 {
-      padding-top: 27px;
+      padding-top: 33px;
       padding-bottom: 50px;
     }
 
@@ -177,7 +178,7 @@
 @media (min-width: @desktop-width) {
   .order-form {
     padding-top: 118px;
-    margin-bottom: -6px;
+    margin-bottom: -4px;
   }
 
   .order-form__text {
@@ -188,7 +189,11 @@
   }
 
   .order-form__fieldset {
-    padding-top: 69px;
+    padding-top: 66px;
+  }
+
+  .order-form__fieldset--radio {
+    padding-top: 77px;
   }
 
   .order-form__fieldset-wrapper {
@@ -212,7 +217,7 @@
   }
 
   .order-form__fieldset--name {
-    b {
+    p {
       margin-top: 0;
     }
 
@@ -222,15 +227,15 @@
   }
 
   .order-form__fieldset--input1 {
-    padding-top: 53px;
+    padding-top: 57px;
   }
 
   .order-form__fieldset--input2 {
-    padding-top: 29px;
+    padding-top: 31px;
   }
 
   .order-form__fieldset--textarea {
-    padding-top: 54px;
+    padding-top: 56px;
     margin-bottom: 48px;
   }
 }

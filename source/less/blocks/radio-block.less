@@ -6,8 +6,6 @@
 }
 
 .radio-block input[type="radio"] {
-  display: none;
-
   & + label::before {
     content: "";
     border-style: solid;
@@ -51,18 +49,20 @@
   }
 
   &:hover + label::before,
-  &:focus + label::before {
+  &:focus + label::before,
+  &:hover:checked + label::before,
+  &:focus:checked + label::before {
     border-color: @color-accent;
   }
 
-  &:active + label::before {
+  &:active + label::before,
+  &:active:checked + label::before {
     border-color: rgba(68, 68, 68, 0.3);
   }
 }
 
 @media (min-width: @tablet-width) {
   .radio-block input[type="radio"] {
-    display: none;
 
     & + label::before {
       content: "";
